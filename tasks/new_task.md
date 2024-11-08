@@ -1,3 +1,5 @@
+![Task Image](https://oaidalleapiprodscus.blob.core.windows.net/private/org-asPC5Skb6EoE1i324HhdGnV1/user-4VyHdJuNDsg3rdcmO7ghXoi2/img-XeVKg5sW39r127tcSCddm53k.png?st=2024-11-08T10%3A22%3A54Z&se=2024-11-08T12%3A22%3A54Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2024-11-08T04%3A59%3A00Z&ske=2024-11-09T04%3A59%3A00Z&sks=b&skv=2024-08-04&sig=FOSR2tMtzIE7kHPk3%2BE%2Bup%2B/DdK/g3UzIKAXVEs2LFM%3D)
+
 # 🎲 Text-Based Blackjack Game
 
 Welcome to your ultimate programming challenge - creating a text-based Blackjack game! In this task, you will design a simple yet engaging Blackjack game where the player can play against a computerized dealer. This project will help you enhance your understanding of object-oriented programming, file I/O, and creative problem-solving.
