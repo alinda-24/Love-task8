@@ -1,3 +1,5 @@
+![Task Image](https://oaidalleapiprodscus.blob.core.windows.net/private/org-asPC5Skb6EoE1i324HhdGnV1/user-4VyHdJuNDsg3rdcmO7ghXoi2/img-eV2vWEfsc42badX9gLIIdkYY.png?st=2024-11-08T10%3A12%3A41Z&se=2024-11-08T12%3A12%3A41Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2024-11-08T10%3A19%3A15Z&ske=2024-11-09T10%3A19%3A15Z&sks=b&skv=2024-08-04&sig=9XEd2cZWemjSFpHpfU4F2ORt/BGyNDX54rP%2BfBXhkAg%3D)
+
 # 🃏 Text-Based Blackjack Game Development Task
 
 ## 🎯 Overview
