@@ -6,27 +6,49 @@ import static org.junit.Assert.*;
 
 public class DeckTest {
 
-    @Test
-    public void testDeck_IsSingleton() {
-        Deck deck1 = Deck.getInstance();
-        Deck deck2 = Deck.getInstance();
+    private Deck deck;
 
-        assertSame(deck1, deck2);
+    @Before
+    public void setup() {
+        deck = Deck.getInstance();
     }
 
     @Test
-    public void testDealCard_ReduceDeckSize() {
-        Deck deck = Deck.getInstance();
-        int initialSize = 52;
+    public void testSingletonInstance() {
+        Deck anotherDeck = Deck.getInstance();
+        assertSame(deck, anotherDeck);
+    }
 
-        for (int i = 0; i < initialSize; i++) {
-            assertNotNull(deck.dealCard());
+    @Test
+    public void testDeckSizeAfterInitialization() {
+        assertEquals(52, deck.cardsRemaining());
+    }
+
+    @Test
+    public void testDealCardReducesDeckSize() {
+        Card card = deck.dealCard();
+        assertNotNull(card);
+        assertEquals(51, deck.cardsRemaining());
+    }
+
+    @Test
+    public void testDealCardFromEmptyDeck() {
+        for (int i = 0; i < 52; i++) {
+            deck.dealCard();
         }
+        assertNull(deck.dealCard());
+    }
 
-        assertNull(deck.dealCard()); // No more cards
+    @Test
+    public void testShufflePreservesDeckSize() {
+        deck.shuffle();
+        assertEquals(52, deck.cardsRemaining());
     }
 }
+```
 
+PlayerTest.java
+```
 import org.junit.Test;
 import static org.junit.Assert.*;
 

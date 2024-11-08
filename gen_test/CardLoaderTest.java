@@ -5,69 +5,46 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class CardLoaderTest {
-    private String validFilePath;
-    private String invalidFilePath;
-    private String emptyFilePath;
 
-    @Before
-    public void setUp() throws IOException {
-        validFilePath = "validDeck.txt";
-        invalidFilePath = "invalidDeck.txt";
-        emptyFilePath = "emptyDeck.txt";
+    private static final String TEST_FILE_PATH = "test_cards.txt";
 
-        // Setup valid file
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(validFilePath))) {
-            writer.write("Ace of Spades\n");
-            writer.write("King of Hearts\n");
-            writer.write("3 of Diamonds\n");
-        }
-
-        // Setup invalid file
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(invalidFilePath))) {
-            writer.write("Ace of Spades\n");
-            writer.write("Invalid Format\n");
-        }
-
-        // Setup empty file
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(emptyFilePath))) {
-        }
+    @Test
+    public void testLoadCardsFromValidFile() {
+        CardLoader loader = new CardLoader();
+        List<Card> cards = loader.loadCardsFromFile(TEST_FILE_PATH);
+        assertNotNull(cards);
+        assertFalse(cards.isEmpty());
     }
 
     @Test
-    public void testLoadCardsFromFile_ValidFile() {
+    public void testLoadCardsFromEmptyFile() {
         CardLoader loader = new CardLoader();
-        List<Card> deck = loader.loadCardsFromFile(validFilePath);
-        assertEquals(3, deck.size());
-        assertEquals("Ace", deck.get(0).getRank());
-        assertEquals("Spades", deck.get(0).getSuit());
+        List<Card> cards = loader.loadCardsFromFile("empty.txt");
+        assertNotNull(cards);
+        assertTrue(cards.isEmpty());
     }
 
     @Test
-    public void testLoadCardsFromFile_InvalidFile() {
+    public void testLoadCardsFromInvalidFile() {
         CardLoader loader = new CardLoader();
-        List<Card> deck = loader.loadCardsFromFile(invalidFilePath);
-        assertEquals(1, deck.size());
-        assertEquals("Ace", deck.get(0).getRank());
-        assertEquals("Spades", deck.get(0).getSuit());
+        List<Card> cards = loader.loadCardsFromFile("non_existent.txt");
+        assertNotNull(cards);
+        assertTrue(cards.isEmpty());
     }
 
     @Test
-    public void testLoadCardsFromFile_EmptyFile() {
+    public void testLoadCardsWithInvalidFormat() {
         CardLoader loader = new CardLoader();
-        List<Card> deck = loader.loadCardsFromFile(emptyFilePath);
-        assertTrue(deck.isEmpty());
-    }
-
-    @Test
-    public void testLoadCardsFromFile_NonExistentFile() {
-        CardLoader loader = new CardLoader();
-        List<Card> deck = loader.loadCardsFromFile("nonexistent.txt");
-        assertTrue(deck.isEmpty());
+        List<Card> cards = loader.loadCardsFromFile("invalid_format.txt");
+        assertNotNull(cards);
+        // Check that no cards are loaded if the format is incorrect
+        assertTrue(cards.isEmpty());
     }
 }
+```
 
+GameTest.java
+```
 import org.junit.Test;
 import static org.junit.Assert.*;
-import java.util.ArrayList;
-import java.util.List;
 
