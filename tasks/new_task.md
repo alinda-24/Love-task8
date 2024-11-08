@@ -1,3 +1,5 @@
+![Task Image](https://oaidalleapiprodscus.blob.core.windows.net/private/org-asPC5Skb6EoE1i324HhdGnV1/user-4VyHdJuNDsg3rdcmO7ghXoi2/img-C1eSkZ2mtSbzLqDcYQxlJhcf.png?st=2024-11-08T10%3A29%3A30Z&se=2024-11-08T12%3A29%3A30Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2024-11-07T20%3A26%3A25Z&ske=2024-11-08T20%3A26%3A25Z&sks=b&skv=2024-08-04&sig=ump4bwoQaFE1ul0dhFhd16xxCKnFEQ6qLJ4Iy47Tlks%3D)
+
 ### 🎲 Task: Building a Text-Based Blackjack Game
 
 Welcome to the exciting world of game development! In this task, you'll be challenged to create a text-based version of Blackjack, a popular card game, while focusing on several key programming concepts. This task will test your understanding of reading data from files, designing object-oriented systems, and creatively applying programming techniques. 
