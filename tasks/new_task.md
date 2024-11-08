@@ -1,3 +1,5 @@
+![Task Image](https://oaidalleapiprodscus.blob.core.windows.net/private/org-asPC5Skb6EoE1i324HhdGnV1/user-4VyHdJuNDsg3rdcmO7ghXoi2/img-yDQHY9vGHUrBl5WbKLtOAKUX.png?st=2024-11-08T12%3A45%3A59Z&se=2024-11-08T14%3A45%3A59Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2024-11-07T19%3A36%3A49Z&ske=2024-11-08T19%3A36%3A49Z&sks=b&skv=2024-08-04&sig=3e0JLeacNNQF4omuu8SOT/r7xgVDOnEa8DWvKDTi6zU%3D)
+
 # 📚 **Creative Programming with Classes and File-Based Object Instantiation**
 
 Welcome to your new programming task! In this series of exercises, you will delve into the world of Java programming with a focus on using file data to dynamically create objects, designing robust classes, and exercising your creative problem-solving skills in programming. The overarching theme we'll explore is the creation of a dynamic **Library Management System**.
