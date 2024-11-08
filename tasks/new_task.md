@@ -1,120 +1,142 @@
-![Task Image](https://oaidalleapiprodscus.blob.core.windows.net/private/org-asPC5Skb6EoE1i324HhdGnV1/user-4VyHdJuNDsg3rdcmO7ghXoi2/img-C1eSkZ2mtSbzLqDcYQxlJhcf.png?st=2024-11-08T10%3A29%3A30Z&se=2024-11-08T12%3A29%3A30Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2024-11-07T20%3A26%3A25Z&ske=2024-11-08T20%3A26%3A25Z&sks=b&skv=2024-08-04&sig=ump4bwoQaFE1ul0dhFhd16xxCKnFEQ6qLJ4Iy47Tlks%3D)
+# 📚 **Creative Programming with Classes and File-Based Object Instantiation**
 
-### 🎲 Task: Building a Text-Based Blackjack Game
+Welcome to your new programming task! In this series of exercises, you will delve into the world of Java programming with a focus on using file data to dynamically create objects, designing robust classes, and exercising your creative problem-solving skills in programming. The overarching theme we'll explore is the creation of a dynamic **Library Management System**.
 
-Welcome to the exciting world of game development! In this task, you'll be challenged to create a text-based version of Blackjack, a popular card game, while focusing on several key programming concepts. This task will test your understanding of reading data from files, designing object-oriented systems, and creatively applying programming techniques. 
+## 🚀 **Learning Goals**
 
-#### 🏆 Learning Goals
+By the end of these exercises, you will:
 
-1. **Using Data from Files to Instantiate Objects**
-   - 🗃️ Understand file formats and parsing techniques.
-   - 📄 Use file I/O classes to read data and populate object attributes.
-   - 🛡️ Handle exceptions to maintain data integrity.
+1. **Using Data from Files to Instantiate Objects:**
+   - Understand various file formats and parsing techniques.
+   - Use Java file I/O classes to read data and convert it into object attributes.
+   - Handle exceptions and ensure data integrity during object instantiation.
 
-2. **Designing Classes**
-   - 🏗️ Define clear class responsibilities and interfaces.
-   - 🔧 Build cohesive classes with fields and methods.
-   - 📜 Apply design patterns for robust class design.
+2. **Designing Classes:**
+   - Identify class responsibilities and define clear interfaces.
+   - Implement cohesive class structures with appropriate fields and methods.
+   - Leverage design patterns to solve common problems and enhance class design.
 
-3. **Programming Creatively**
-   - 🌀 Explore different problem-solving approaches.
-   - 🔍 Encourage creative iteration and experimentation.
-   - 🧪 Integrate user feedback to improve functionality.
+3. **Programming Creatively:**
+   - Explore different approaches to problem-solving and algorithm design.
+   - Encourage experimentation and iteration to refine solutions.
+   - Integrate user feedback and testing to improve program effectiveness and usability.
 
----
+## 📝 **Exercises**
 
-### 🧠 Exercise 1: Theoretical Foundations in File Handling
+### 🧠 **Exercise 1: Understanding File Formats and Parsing** 
 
-**Objective:** Gain a thorough understanding of how to use files for data management in Java.
+**Objective:**  
+Explore theoretical aspects of file-based data extraction.
 
-1. **Question:** Explain the difference between CSV and JSON file formats. How might each be used in game development, specifically within our Blackjack theme?
-   
-2. **Discussion:** What are the main challenges associated with reading data from files? How can these challenges impact game performance and reliability?
-
----
-
-### 🧠 Exercise 2: Object-Oriented Design Principles
-
-**Objective:** Explore class design principles before jumping into implementation.
-
-1. **Question:** How do encapsulation and inheritance enhance the design of a card game like Blackjack? Provide a brief design sketch of possible classes you might use (e.g., `Card`, `Deck`, `Player`, etc.).
-
-2. **Discussion:** Discuss the importance of interfaces and abstract classes. How could these be utilized in the design of a Blackjack game?
+**Instructions:**  
+- Describe the differences between CSV and JSON file formats. Why might one be preferred over the other in different scenarios?
+- Discuss how data can be parsed from a text file in Java without using external libraries. Mention tools or classes you might employ.
+  
+_No code is required for this exercise._
 
 ---
 
-### 💻 Exercise 3: Parsing File Data into Java Objects
+### 🧩 **Exercise 2: Class Design Principles**
 
-**Objective:** Implement reading and parsing of card data from a file to instantiate game objects.
+**Objective:**  
+Solidify your understanding of effective class design.
 
-**Instructions:**
-- Create a text file `cards.txt` that describes a standard deck. Each line should have a representation of a card (e.g., `2 of Hearts`, `King of Spades`).
-- Implement a `Card` class and write a method `loadCardsFromFile(String filePath)` that reads from `cards.txt` and creates `Card` objects.
+**Instructions:**  
+- Explain why it’s essential for a class to have well-defined responsibilities.
+- Discuss how design patterns can help enhance class design, providing an example of one such pattern.
+  
+_No code is required for this exercise._
 
-**Code Snippet Example:**
+---
+
+### 🔧 **Exercise 3: Basic File Parsing and Object Creation**
+
+**Objective:**  
+Implement basic file reading to instantiate objects in Java.
+
+**Scenario:**  
+You’re tasked with reading a list of books from a CSV file and creating a `Book` class for our library system.
+
+**Instructions:**  
+- Design the `Book` class with attributes such as `title`, `author`, `yearPublished`, and `ISBN`.
+- Write a Java method `loadBooksFromFile(String filename)` that reads each line of a CSV file and creates a `Book` object for each entry, adding it to an ArrayList of Books.
+  
+_Sample CSV entry format:_  
+`"The Great Gatsby, F. Scott Fitzgerald, 1925, 9780743273565"`
 
 ```java
-public List<Card> loadCardsFromFile(String filePath) {
-    List<Card> deck = new ArrayList<>();
-    try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
-        String line;
-        while ((line = reader.readLine()) != null) {
-            // Parse line and create Card object
-            // Add Card to deck
-        }
-    } catch (IOException e) {
-        e.printStackTrace(); // Proper exception handling required
-    }
-    return deck;
+public class Book {
+    private String title;
+    private String author;
+    private int yearPublished;
+    private String isbn;
+    // Constructors, getters, and setters...
+}
+
+public ArrayList<Book> loadBooksFromFile(String filename) {
+    // Implement file reading and parsing logic here
 }
 ```
 
 ---
 
-### 💻 Exercise 4: Designing and Implementing Core Classes
+### 🔨 **Exercise 4: Designing the Library Class**
 
-**Objective:** Design key classes for the game and implement them using object-oriented principles.
+**Objective:**  
+Integrate the `Book` class into a `Library` class and focus on class cohesion.
 
-**Instructions:**
-- Design and implement classes: `Card`, `Deck`, `Player`, and `Dealer`.
-- The `Deck` class should shuffle cards, while `Player` should manage a hand of cards and calculate their total.
+**Instructions:**  
+- Design a `Library` class with methods to add books (`addBook`), list all books (`listBooks`), and search for a book by title (`findBookByTitle(String title)`).
+- Consider using a `Map` to store books for faster search operations by title.
 
-**Design Pattern Application:**
-Implement the Singleton pattern for the `Deck` class to ensure only one instance is used throughout the game.
-
----
-
-### 🔥 Exercise 5: Game Logic and Flow
-
-**Objective:** Assemble your game classes to create the flow of a Blackjack game.
-
-**Instructions:**
-- Create a `Game` class that orchestrates the game's flow: dealing cards, player decisions (hit/stand), and dealer logic.
-- Implement logic to determine win/loss conditions.
-
-**Challenges:**
-- Add exception handling for invalid user inputs.
-- Ensure the game accounts for Blackjack rules, such as bust conditions and soft/hard totals.
+```java
+public class Library {
+    private Map<String, Book> books;
+    // Implement addBook, listBooks, findBookByTitle, and other necessary methods.
+}
+```
 
 ---
 
-### 🕹️ Exercise 6: Testing and Creative Enhancements
+### 💡 **Exercise 5: Dynamic Library with File-Driven Initialization**
 
-**Objective:** Test your game thoroughly and add creative features to enhance gameplay.
+**Objective:**  
+Enhance the library system by dynamically reading and applying more complex data sets.
 
-**Instructions:**
-- Write a test suite to thoroughly test your game's logic and ensure it meets standard Blackjack rules.
-- Enhance your game creatively — consider adding a betting system, multiple player capability, or an AI dealer.
+**Instructions:**  
+- Extend your `loadBooksFromFile` method to handle possible parsing errors with graceful exception handling.
+- Add a feature in `Library` class to update book details (like changing the year or correcting the title).
 
-**Testing Example:**
-Use Java's JUnit framework to ensure your classes and methods behave as expected.
+_Hint: Use a `try-catch` block to handle file I/O exceptions._
+
+```java
+// Enhance loadBooksFromFile with exception handling
+```
 
 ---
 
-### 🚀 Conclusion
+### 🎨 **Exercise 6: Creative Enhancement**
 
-Congratulations! You've reached the end of this task. You learned about integrating file data into a dynamic system, refined your object-oriented design skills, and creatively extended a simple game—skills valuable both in academia and industry.
+**Objective:**  
+Bring creativity into the design and implementation of your library system.
 
-Document and submit your completed solution, ensuring it is well-commented and organized. We hope you had fun and learned a lot!
+**Instructions:**  
+- Add a feature to manage book loans and returns. Include a `User` class representing patrons of the library.
+- Design a user interface (console-based) that allows interaction with the library system.
+- Use user feedback to iterate and refine your system, ensuring it's user-friendly and robust.
 
-🎉 Best of luck, and happy coding! 🎉
+```java
+public class User {
+    private String name;
+    private List<Book> borrowedBooks;
+    // Implement loanBook, returnBook, and other methods.
+}
+```
+
+#### **Submission Requirements**
+
+- Submit your Java source files and a README explaining how your library system works.
+- Ensure your code is well-documented with Javadoc comments for all public classes and methods.
+- Include sample input files used for testing.
+
+Prepare to showcase your programming skills and creativity as you embark on designing and building a functional Library Management System! Happy coding! 🚀
